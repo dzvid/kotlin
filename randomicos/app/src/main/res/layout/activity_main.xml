@@ -12,16 +12,19 @@
         android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/white"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="140dp"
         />
 
     <Button
         android:id="@+id/buttonRandom"
-        android:text="Random"
+        android:text="@string/aleatorio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
