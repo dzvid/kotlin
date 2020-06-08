@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Randomicos</string>
+    <string name="aleatorio">Gerar número</string>
+</resources>
