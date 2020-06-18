@@ -8,6 +8,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.hefesto.pokedex.data.Pokemon
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_pokemon_detail.*
 
@@ -15,7 +16,7 @@ class PokemonDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pokemon_detail)
-        intent.getParcelableExtra<Pokemon>(POKEMON_EXTRA)?.let{pokemon ->
+        intent.getParcelableExtra<Pokemon>(POKEMON_EXTRA)?.let{ pokemon ->
             tvName.text = pokemon.name
             tvNumber.text = "#%03d".format(pokemon.number)
             tvFirstType.text = pokemon.types.getOrNull(0)

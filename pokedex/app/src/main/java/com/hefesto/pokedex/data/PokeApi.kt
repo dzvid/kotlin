@@ -1,4 +1,4 @@
-package com.hefesto.pokedex
+package com.hefesto.pokedex.data
 
 import com.google.gson.GsonBuilder
 import retrofit2.Call

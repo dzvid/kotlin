@@ -8,6 +8,9 @@ import android.widget.Toast
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
+import com.hefesto.pokedex.data.AppDatabase
+import com.hefesto.pokedex.data.PokeApi
+import com.hefesto.pokedex.data.Pokemon
 import kotlinx.android.synthetic.main.activity_add_pokemon.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,6 +47,8 @@ class AddPokemonActivity : AppCompatActivity() {
                             val intent = Intent().apply{
                                 putExtra(ADD_POKEMON_EXTRA, pokemon)
                             }
+                            AppDatabase.getInstance(this@AddPokemonActivity)
+                                .pokemonDao.insert(pokemon!!)
                             setResult(Activity.RESULT_OK, intent)
                             finish()
                         } else {

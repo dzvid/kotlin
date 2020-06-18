@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.hefesto.pokedex.data.Pokemon
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item_pokemon.view.*
 
